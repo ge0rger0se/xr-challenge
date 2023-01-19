@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
-        if (Input.GetKeyDown(KeyCode.Space) && rb.position.y == 0.5)
+        if (Input.GetKeyDown(KeyCode.Space) && rb.position.y <= 0.5)
         {
             rb.AddForce(Vector3.up * playerJumpHeight);
         }
